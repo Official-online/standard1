@@ -1,13 +1,13 @@
-*{box-sizing: border-box;}
 body{
-    /* background-size:100%; */
+    background-size:100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     font-size: 100%;
 }
+*{box-sizing: border-box;}
 #background{
     background-image: url(./standard-bank-logo.png);
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: 60%;
     background-repeat: no-repeat;
     background-position:center;
@@ -17,16 +17,13 @@ body{
 #div1{
     position: sticky;
     top: 0;
-    /* border: 3px solid rgb(237, 224, 224); */
-    /* width: 40%; */
     margin-top: 19%;
     background-color: rgb(29, 44, 156);
-    /* padding: -11%; */
     box-shadow: 3px 3px 3px 3px rgb(237, 224, 224);;
 }
 #img1{
     width: 45%;
-    margin: -13% 0 -15% 3%;
+    margin: -13% 0 -14.5% 3%;
 }
 #div2{
     position: absolute;
