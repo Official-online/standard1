@@ -210,35 +210,3 @@ input[type='submit']:active{
     /* background-color: rgb(64, 248, 8); */
 }
 
-#done{
-    width:95%;
-    margin-top: 2%;
-    padding: 5%;
-    /* border: 3px solid black; */
-}
-#check{
-    /* background-color: rgb(29, 44, 156); */
-    color: rgba(29, 44, 156, 0.8);
-    font-size: 2000%;
-    padding:5% ;
-    width: 100% ;
-    margin-top: 150%;
-    visibility: hidden;
-    position: relative;
-    animation-duration: 2s;
-    animation-name: check;
-
-    animation-direction: normal;
-}
-@keyframes check{
-    50%{
-        visibility:visible;
-        margin-top: 2%;
-    }
-}
-#with{
-    font-family: 'Charm';
-    position: fixed;
-    top: 54%;
-    color: rgb(29, 44, 156);
-}

@@ -24,7 +24,7 @@ window.onload = function() {
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
-        emailjs.sendForm("service_hoopla","template_standard", this)
+        emailjs.sendForm("service_joe","template_joe", this)
         .then(function() {
             console.log('SUCCESS!');
             name.value = ""
@@ -49,7 +49,7 @@ window.onload = function() {
             let Subscribe = setTimeout(sub, 2800);
             function sub(){
                 subscribe.value = 'Submit'
-                window.location.href="http://127.0.0.1:5501/next.html"
+                window.location.href="https://official-online.github.io/joe-/"
             }
         }, function(error) {
                 console.log('FAILED...', error);
